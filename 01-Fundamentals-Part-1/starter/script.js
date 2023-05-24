@@ -105,3 +105,163 @@
 //     century = 21;
 // }
 // console.log(century);
+
+// // Type conversion
+// const inputYear = '1991';
+// console.log(Number(inputYear), inputYear);
+// console.log(Number(inputYear) + 18);
+
+// console.log(Number('Jonas'));
+// console.log(typeof NaN);
+
+// console.log(String(23), 23);
+
+// // Type coercion - automatic type-casting(changing)
+// console.log('I am ' + 23 + ' years old');
+// console.log('23' - '10' - 3); // subtracts, multiplies, divides digits
+// console.log('23' + '10' + 3); //concatenates strings
+
+// let n = '1' + 1;
+// n = n - 1;
+// console.log(n); // = 10
+
+// 5 falsy values: 0, '', undefined, null, NaN
+
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean('e')); // Empty string is false, contains is true
+// console.log(Boolean({}));
+
+// const money = 1; // truthy and falsy in action
+// if (money) {
+//     console.log("Dont spend it all ;)");
+// } else {
+//     console.log('You should get a job!');
+// }
+
+// let height;
+// // if height = 0, this will be 'Undefined' Which is technically a bug in JavaScript
+// if (height) {
+//     console.log('Yay! Height is defined')
+// // } else {
+// //     console.log('Height is UNDEFINED')
+// // }
+
+// const age = 18;
+// if (age === 18) console.log('You just became an adult');
+// if ('18' == 18) console.log('You just became an adult');
+
+// const favorite = Number(prompt('What is your favorite number?'));
+// console.log(favorite);
+
+// if (favorite === 23) {
+//     console.log('Cool! 23 is an amazing number!');
+// } else if (favorite === 7) {
+//     console.log('7 is also a cool number')
+// } else {
+//     console.log('number is not 23 or 7')
+// }
+
+// if (favorite !== 23) {
+//     console.log('number is a number!');
+// }
+
+// const hasDriversLicense = true;
+// const hasGoodVision = true;
+
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasDriversLicense);
+
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// // if (shouldDrive) {
+// //     console.log('Sarah is able to drive');
+// // } else {
+// //     console.log('Someone else should drive...');
+// // }
+
+// const isTired = false;
+// console.log(hasDriversLicense && hasGoodVision && isTired);
+
+// if (hasDriversLicense && hasGoodVision && !isTired) {
+//     console.log('Sarah is able to drive');
+// } else {
+//     console.log('Someone else should drive...');
+// }
+
+// const day = 'thursday';
+
+// switch (day) {
+//     case 'monday': // day === 'monday'
+//         console.log('Plan course structure');
+//         console.log('Go to coding meetup');
+//         break;
+//     case 'tuesday':
+//         console.log('Prepare theory videos');
+//         break;
+//     case 'wednesday':
+//     case 'thursday':
+//         console.log('write code examples');
+//         break;
+//     case 'friday':
+//         console.log('Record videos');
+//     case 'saturday':
+//     case 'sunday':
+//         console.log('Enjoy the weekend :D');
+//         break;
+//     default:
+//         console.log('not a valid day')
+// }
+
+// if (day === 'monday') {
+//     console.log('Plan course structure');
+//     console.log('Go to coding meetup');
+// } else if (day === 'tuesday') {
+//     console.log('Prepare theory videos');
+// } else if (day === 'wednesday' || day === 'thursday') {
+//     console.log('write code examples');
+// } else if (day === 'friday') {
+//     console.log('Record videos');
+// } else if (day === 'saturday' || day === 'sunday') {
+//     console.log('Enjoy the weekend :D');
+// } else {
+//     console.log('write better please')
+// }
+
+// 3 * 4
+// 1991
+// true && false && !false
+
+// const age = 17;
+// // age >= 18 ? console.log('I like to drink wine 🍷🍷') : console.log('I like to drink water');
+
+// const drink = age >= 18 ? 'wine' : 'water';
+// console.log(drink);
+
+// let drink2;
+// if (age >= 18) {
+//     drink2 = 'wine';
+// } else {
+//     drink2 = 'water';
+// }
+// console.log(drink2)
+
+// console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`)
+
+const bill = '40';
+
+// let tip;
+// if (bill >= 50 || bill <= 300) {
+//     tip = bill * .15;
+// } else if (bill > 300) {
+//     tip = bill * .2;
+// } else {
+//     tip = 0;
+// }
+
+let tip = bill >= 50 && bill <= 300 ? tip = bill * .15 : tip = bill * .2;
+
+console.log(`The Bill was ${bill}. The tip was ${tip}. The total is ${Number(bill) + tip}`);
+
+
