@@ -327,3 +327,96 @@
 // john.calcBMI();
 // console.log(higherBMI());
 
+// for loop keeps running while condition is TRUE
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`Lifting weights repetition ${rep} 🏋️`);
+// }
+
+// const jonasArray = [
+//     'Jonas',
+//     'Schmedtmann',
+//     2037 - 1991,
+//     'teacher',
+//     ['Michael', 'Peter', 'Steven']
+// ];
+// const types = [];
+
+// for (let i = 0; i < jonasArray.length; i++) {
+//     // Reading from JonasArray
+//     console.log(jonasArray[i], typeof jonasArray[i]);
+
+//     // Filling the types array
+//     // types[i] = typeof jonasArray[i];
+
+//     types.push(typeof jonasArray[i]);
+// }
+// console.log(types);
+
+// const years = [1991, 2007, 1969, 2020];
+
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//     ages.push(2037 - years[i]);
+// }
+
+// console.log(ages);
+
+// // continue and break
+// for (let i = 0; i < jonasArray.length; i++) {
+//     if (typeof jonasArray[i] === 'number') break;
+
+//     console.log(jonasArray[i], typeof jonasArray[i]);
+// }
+
+// const jonas = [
+//     'Jonas',
+//     'Schmedtmann',
+//     2037 - 1991,
+//     'teacher',
+//     ['Michael', 'Peter', 'Steven']
+// ];
+
+// for (let i = jonas.length - 1; i >= 0; i--) {
+//     console.log(i, jonas[i]);
+// }
+
+// for (let exercise = 1; exercise <= 3; exercise++) {
+//     console.log(`--------Starting exercise ${exercise}------------`);
+
+//     for (let rep = 1; rep < 6; rep++) {
+//         console.log(`Exercise ${exercise} :Lifting weight repetition ${rep}`);
+//     }
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//     console.log(`Lifting weights repetition ${rep}🏋️🏋️`);
+//     rep++;
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// console.log(dice);
+
+// while (dice !== 6) {
+//     console.log(`You rolled a ${dice}`);
+//     dice = Math.trunc(Math.random() * 6) + 1;
+// }
+
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const totals = [];
+
+// let tip;
+// for (let i = 0; i < bills.length; i++) {
+//     const calcTip = function () {
+//         tip = bills[i] >= 50 && bills[i] <= 300 ? bills[i] * .15 : bills[i] * .2;
+//         tips.push(tip);
+//     }
+//     calcTip();
+//     totals.push(tip + bills[i])
+// }
+// console.log(bills)
+// console.log(tips)
+// console.log(totals)
+
