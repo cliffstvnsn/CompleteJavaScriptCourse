@@ -26,4 +26,86 @@ const restaurant = {
       close: 24,
     },
   },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]]
+  },
+
+  orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
+    console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+  }
 };
+
+
+// Destructuring Objects
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Via del Sole, 21',
+  mainIndex: 2,
+  starterIndex: 2
+})
+
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
+const { name: restaurantName, openingHours: hours, categories: tags } = restaurant;
+console.log(name, openingHours, categories);
+
+// default values
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+
+// Mutating variables
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+
+({ a, b } = obj);
+console.log(obj);
+
+// Nested Objects
+const { fri: { open, close } } = openingHours;
+console.log(open, close);
+
+// const arr = [2, 3, 4];
+// const x = arr[0];
+// const y = arr[1];
+// const z = arr[2];
+
+// // Not an array. Destructuring assignment
+// const [a, b, c] = arr;
+
+// console.log(a, b, c);
+// console.log(x, y, z);
+
+// let [main, , secondary] = restaurant.categories;
+// console.log(main, secondary);
+
+// // switching variables like a linked list
+// // const temp = main;
+// // main = secondary;
+// // secondary = temp;
+// // console.log(temp);
+// // console.log(main, secondary);
+
+// // using destructuring 
+// [main, secondary] = [secondary, main]
+// console.log(main, secondary);
+
+// console.log(restaurant.order(2, 0));
+
+// const [starter, mainCourse] = restaurant.order(2, 0);
+// console.log(starter, mainCourse);
+
+// const nested = [2, 3, [5, 6]];
+// // const [i, , j] = nested;
+// // console.log(i, j);
+
+// // nested destructuring, destructuring inside destructuring
+// const [i, , [j, k]] = nested;
+// console.log(i, j, k);
+
+// // Default Values
+// const [p = 1, q = 1, r = 1] = [8, 9];
+// console.log(p, q, r);
+
