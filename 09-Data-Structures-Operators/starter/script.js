@@ -1,8 +1,8 @@
 'use strict';
 
 // Data needed for a later exercise
-const flights =
-  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+// const flights =
+//   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
 const openingHours = {
@@ -50,50 +50,88 @@ const restaurant = {
   }
 };
 
-console.log('a+very+nice+string'.split('+'));
-console.log('Jonas Schmedtmann'.split(' '));
+// restaurant.numGuests = 0;
 
-const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
+const guests = restaurant.numGuests || 10
+console.log(guests);
 
-const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
-console.log(newName);
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
 
-const capitalizedName = function (name) {
-  const names = name.split(' ');
-  const namesUpper = [];
+// console.log('------- OR -------');
+// // Use any data type, return any data type, short-circuiting
+// console.log(3 || 'Jonas');
+// console.log('' || 'Jonas');
+// console.log(true || 0);
+// console.log(undefined || null);
 
-  for (const n of names) {
-    // Solution 1
-    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
-    // Solution 2
-    namesUpper.push(n.replace(n[0], n[0].toUpperCase()))
-  }
-  console.log(namesUpper.join(' '));
-}
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null);
 
-capitalizedName('jessica ann smith davis');
-capitalizedName('jonas schmedtmann');
+// restaurant.numGuests = 23;
 
-const message = 'Go to gate 23!'
-console.log(message.padStart(25, '+').padEnd(36, '+'));
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guests1);
 
-const maskCreditCard = function (number) {
-  const str = number + '';
-  const last = str.slice(-4);
-  return last.padStart(str.length, '*')
-}
-console.log(maskCreditCard(394885037598349));
-maskCreditCard('3948850375983493542643');
+// const guests2 = restaurant.numGuests || 10
+// console.log(guests2);
+// console.log('------- AND --------');
+// console.log(0 && 'Jonas');
+// console.log(7 && 'Jonas');
 
-const message2 = 'Bad weather...All Departures Delayed...';
-console.log(message2.repeat(5));
+// console.log('Hello' && 23 && null && 'jonas');
 
-const planesInLine = function (n) {
-  console.log(`There are ${n} planes in line ${'J'.repeat(n)}`);
-}
-planesInLine(5);
-planesInLine(3);
-planesInLine(12);
+// if (restaurant.orderPizza) {
+//   restaurant.orderPizza('mushrooms', 'spinach');
+// }
+
+// restaurant.orderPizza & restaurant.orderPizza('mushrooms', 'spinach')
+
+// nullish coalescing operator
+
+// console.log('a+very+nice+string'.split('+'));
+// console.log('Jonas Schmedtmann'.split(' '));
+
+// const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
+
+// const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+// console.log(newName);
+
+// const capitalizedName = function (name) {
+//   const names = name.split(' ');
+//   const namesUpper = [];
+
+//   for (const n of names) {
+//     // Solution 1
+//     // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+//     // Solution 2
+//     namesUpper.push(n.replace(n[0], n[0].toUpperCase()))
+//   }
+//   console.log(namesUpper.join(' '));
+// }
+
+// capitalizedName('jessica ann smith davis');
+// capitalizedName('jonas schmedtmann');
+
+// const message = 'Go to gate 23!'
+// console.log(message.padStart(25, '+').padEnd(36, '+'));
+
+// const maskCreditCard = function (number) {
+//   const str = number + '';
+//   const last = str.slice(-4);
+//   return last.padStart(str.length, '*')
+// }
+// console.log(maskCreditCard(394885037598349));
+// maskCreditCard('3948850375983493542643');
+
+// const message2 = 'Bad weather...All Departures Delayed...';
+// console.log(message2.repeat(5));
+
+// const planesInLine = function (n) {
+//   console.log(`There are ${n} planes in line ${'J'.repeat(n)}`);
+// }
+// planesInLine(5);
+// planesInLine(3);
+// planesInLine(12);
 
 // const airline = 'TAP Air Portugal';
 
